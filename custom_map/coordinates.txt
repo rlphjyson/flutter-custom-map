@@ -1,0 +1,22 @@
+Whole map dimentions: 4373x4373
+
+Coordinates:
+Bill and Ted x:3513 y:1621
+Brexit x:3621 y:1827
+Enter the dragon x863 y1406
+fifty first dates x816 y921
+ground hog day x756 y1080
+kung fu panda x1052 y3224
+launch pad link x:1666; y:788
+launch pad x1280 y1265
+mash  x3522 y3537
+park exit trail : x897; y:689
+point break x1305 y1600
+skills zone x945 y1265
+skyline: x 1675 ; y: 543
+the matrix x1653 y1458
+top gun  x1800 y2197
+viper x2350 y3056
+
+
+ratio 0.228
