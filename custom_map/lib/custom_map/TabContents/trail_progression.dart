@@ -1,3 +1,4 @@
+import 'package:custom_map/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class TrailProgression extends StatelessWidget {
@@ -8,10 +9,15 @@ class TrailProgression extends StatelessWidget {
     return Center(
       child: Container(
         height: 500,
-        color: const Color.fromARGB(255, 194, 181, 155),
+        color: Colors.white,
         width: MediaQuery.of(context).size.width * 1,
-        child: Image.asset(
-          'assets/progression.png',
+        child: Center(
+          child: SizedBox(
+            width: 350,
+            child: Image.asset(
+              'assets/progression.png',
+            ),
+          ),
         ),
       ),
     );

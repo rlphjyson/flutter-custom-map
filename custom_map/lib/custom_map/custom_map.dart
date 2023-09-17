@@ -39,7 +39,7 @@ class _CustomMapState extends State<CustomMap> {
                 width: 1080,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/TMBP MAP Cropted.png')),
+                      image: AssetImage('assets/TMBPMAPFINALPOI082023.png')),
                 ),
               ),
             ),

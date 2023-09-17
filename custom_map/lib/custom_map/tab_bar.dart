@@ -1,3 +1,4 @@
+import 'package:custom_map/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class MapTabBar extends StatelessWidget {
@@ -9,8 +10,12 @@ class MapTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(
-          255, 194, 181, 155), // Customize the background color
+      width: MediaQuery.of(context).size.width * 1,
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(134, 211, 211, 211),
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -38,7 +43,7 @@ class MapTabBar extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: isSelected ? Colors.black : Colors.transparent,
+            color: isSelected ? TimberlandColor.primary : Colors.transparent,
             width: 2.0,
           ),
         ),
@@ -46,7 +51,7 @@ class MapTabBar extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          color: isSelected ? Colors.black : Colors.white,
+          color: isSelected ? TimberlandColor.primary : Colors.white,
           fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
         ),
       ),

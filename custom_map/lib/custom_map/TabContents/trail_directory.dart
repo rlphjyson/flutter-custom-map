@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:custom_map/constants/colors.dart';
 import 'package:custom_map/custom_map/TabContents/trailWidget/trail_widget.dart';
 import 'package:custom_map/custom_map/trail_coordinates.dart';
 import 'package:custom_map/data/model/trails_model.dart';
@@ -38,22 +39,14 @@ class _TrailDirectoryState extends State<TrailDirectory> {
       children: [
         /////INFO???
         Container(
-          width: MediaQuery.of(context).size.width * .50,
+          width: MediaQuery.of(context).size.width * .49,
           decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 194, 181, 155),
-              border: Border(
-                  bottom: BorderSide(color: Colors.black, width: 3),
-                  left: BorderSide(color: Colors.black, width: 3),
-                  right: BorderSide(color: Colors.black, width: 3))),
+            color: TimberlandColor.background,
+          ),
           child: Column(children: [
             Container(
               height: 40,
               width: MediaQuery.of(context).size.width * .50,
-              decoration: BoxDecoration(
-                  border: Border.all(
-                color: Colors.black,
-                width: 2,
-              )),
               child: const Center(
                   child: Text(
                 'INFO',
@@ -190,24 +183,27 @@ class _TrailDirectoryState extends State<TrailDirectory> {
             ),
           ]),
         ),
+
+        ///DIVIDER//
+        Container(
+          color: TimberlandColor.background,
+          width: MediaQuery.of(context).size.width * 0.02,
+          child: Center(
+              child: Container(
+            width: 5,
+            height: 250,
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+          )),
+        ),
         /////TRAILS
         Container(
-          width: MediaQuery.of(context).size.width * .50,
-          decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 194, 181, 155),
-              border: Border(
-                  bottom: BorderSide(color: Colors.black, width: 3),
-                  left: BorderSide(color: Colors.black, width: 3),
-                  right: BorderSide(color: Colors.black, width: 3))),
+          width: MediaQuery.of(context).size.width * .49,
+          decoration: const BoxDecoration(color: TimberlandColor.background),
           child: Column(children: [
             Container(
               height: 40,
               width: MediaQuery.of(context).size.width * .50,
-              decoration: BoxDecoration(
-                  border: Border.all(
-                color: Colors.black,
-                width: 2,
-              )),
               child: const Center(
                   child: Text(
                 'TRAILS',

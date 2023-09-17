@@ -31,37 +31,39 @@ class _CustomMapPageState extends State<CustomMapPage> {
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      body: Column(
-        children: [
-          SizedBox(
-              width: MediaQuery.of(context).size.width * 1,
-              child: CustomMap(
-                controller: _controller,
-              )),
-          Expanded(
-            child: Column(
-              children: [
-                MapTabBar(
-                  currentIndex: _currentIndex,
-                  onTap: (index) {
-                    setState(() {
-                      _currentIndex = index;
-                    });
-                  },
-                ),
-                Expanded(
-                  child: IndexedStack(
-                    index: _currentIndex,
-                    children: [
-                      TrailDirectory(
-                        controller: _controller,
-                      ),
-                      const TrailProgression(),
-                      const AdditionalInfo(),
-                    ],
+      body: Stack(
+        children: <Widget>[
+          CustomMap(
+            controller: _controller,
+          ),
+          Positioned(
+            bottom: 0,
+            child: Container(
+              height: 410,
+              child: Column(
+                children: [
+                  MapTabBar(
+                    currentIndex: _currentIndex,
+                    onTap: (index) {
+                      setState(() {
+                        _currentIndex = index;
+                      });
+                    },
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: IndexedStack(
+                      index: _currentIndex,
+                      children: [
+                        TrailDirectory(
+                          controller: _controller,
+                        ),
+                        const TrailProgression(),
+                        const AdditionalInfo(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
